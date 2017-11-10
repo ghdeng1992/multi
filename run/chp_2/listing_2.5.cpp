@@ -1,10 +1,18 @@
 #include <thread>
+#include <iostream>
+
+using std::cout;
+using std::endl;
 
 void some_function()
-{}
+{
+    cout << "some_function" << endl;
+}
 
 void some_other_function(int)
-{}
+{
+    cout << "some_other_function" << endl;
+}
 
 std::thread f()
 {
