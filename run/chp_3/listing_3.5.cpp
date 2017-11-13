@@ -5,7 +5,7 @@
 
 struct empty_stack: std::exception
 {
-    const char* what() const throw()
+    const char* what() const throw() //不抛出异常
     {
         return "empty stack";
     }

@@ -1,5 +1,6 @@
 #include <mutex>
 #include <stdexcept>
+#include <climits>
 
 class hierarchical_mutex
 {
@@ -51,6 +52,10 @@ thread_local unsigned long
 int main()
 {
     hierarchical_mutex m1(42);
+    m1.lock();
     hierarchical_mutex m2(2000);
+    m2.lock();
+    hierarchical_mutex m3(1000);
+    m3.lock();
     
 }
